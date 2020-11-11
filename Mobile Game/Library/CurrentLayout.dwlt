@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 726
-  m_MinSize: {x: 713, y: 474}
-  m_MaxSize: {x: 18008, y: 14024}
+  m_MinSize: {x: 713, y: 498}
+  m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 75
+  controlID: 88
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 726
-  m_MinSize: {x: 232, y: 474}
-  m_MaxSize: {x: 10002, y: 14024}
+  m_MinSize: {x: 232, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 95
+  controlID: 70
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 348}
   m_MaxSize: {x: 4004, y: 8048}
   vertical: 1
-  controlID: 76
+  controlID: 89
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 481
     width: 765
     height: 245
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 124}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -411,7 +411,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: defbffff
+      m_ExpandedIDs: 9cf0ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -475,18 +475,16 @@ MonoBehaviour:
     m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
-  m_LastFolders:
-  - Assets
+  m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/alexcarolan/Documents/Development/The-Rogue-Night-UNITY/The
-    Rogue Night
+  m_LastProjectPath: /Users/alexcarolan/Documents/Mobile-Game/Mobile Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 72090000
     m_LastClickedID: 2418
-    m_ExpandedIDs: 00000000ae0a0000d20a0000f80a0000420b0000480b00008a0b0000b00b00000c0c00006e0c0000720c0000ec0c0000f20c0000120d0000700d0000c40d00000a0e0000320e0000480e0000800e00008a0e0000900e00009e0e0000c40e0000ea0e0000f80e0000360f0000500f0000560f00005e0f0000da0f0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -514,7 +512,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ae0a0000d20a0000f80a0000420b0000480b00008a0b0000b00b00000c0c00006e0c0000720c0000ec0c0000f20c0000120d0000700d0000c40d00000a0e0000320e0000480e0000800e00008a0e0000900e00009e0e0000c40e0000ea0e0000f80e0000360f0000500f0000560f00005e0f0000da0f0000
+    m_ExpandedIDs: ffffffff702e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,13 +594,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: a25f33df78f4a42cf921de187c2d0415
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.513324, y: -0.9986773, z: -69.25813}
+    m_Target: {x: 0.5820551, y: 1.1658449, z: -1.2321577}
     speed: 2
-    m_Value: {x: -0.513324, y: -0.9986773, z: -69.25813}
+    m_Value: {x: 0.5820551, y: 1.1658449, z: -1.2321577}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -622,25 +620,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.06261349, y: 0.9241492, z: -0.17276339, w: -0.3349338}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.06261349, y: 0.9241492, z: -0.17276339, w: -0.3349338}
   m_Size:
-    m_Target: 16.473747
+    m_Target: 12.158487
     speed: 2
-    m_Value: 16.473747
+    m_Value: 12.158487
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -676,7 +674,6 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 1107390494080065364, guid: e12d39a607d454b2792169a361601dba, type: 2}
     - {fileID: 1107197887884470972, guid: db108cb677dd046049de59b2fe3c7ed7, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
@@ -687,22 +684,6 @@ MonoBehaviour:
       e11: 1
       e12: 0
       e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.55077344
-      e01: 0
-      e02: 0
-      e03: 1.3476795
-      e10: 0
-      e11: 0.55077344
-      e12: 0
-      e13: 145.5494
       e20: 0
       e21: 0
       e22: 1
