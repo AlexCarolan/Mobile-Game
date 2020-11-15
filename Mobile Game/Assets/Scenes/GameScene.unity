@@ -289,7 +289,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343199910}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 30a3c1bd2b46147d1b103bf286944d4d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 1520157697}
   - component: {fileID: 1520157696}
   - component: {fileID: 1520157695}
+  - component: {fileID: 1520157700}
   m_Layer: 0
   m_Name: Player Cube
   m_TagString: Untagged
@@ -462,3 +463,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520157700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520157694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5b341894dde44aa98991654c553d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
