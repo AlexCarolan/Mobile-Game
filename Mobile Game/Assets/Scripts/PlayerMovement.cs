@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    private readonly float forwardSpeed = 100f;
+    private readonly float sideSpeed = 500f;
+
     private Rigidbody rigidBody;
 
     // Start is called before the first frame update
@@ -16,6 +19,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rigidBody.AddForce(0, 0, 2000 * Time.deltaTime);
+        //Forward momentum
+        rigidBody.AddForce(0, 0, forwardSpeed * Time.fixedDeltaTime);
+
+        //Directional Controls
+        if (Input.GetKey("d"))
+        {
+            rigidBody.AddForce(sideSpeed * Time.fixedDeltaTime, 0, 0);
+        }
+        else if (Input.GetKey("a"))
+        {
+            rigidBody.AddForce(-sideSpeed * Time.fixedDeltaTime, 0, 0);
+        }
     }
 }
