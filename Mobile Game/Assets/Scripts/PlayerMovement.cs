@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private readonly float forwardSpeed = 100f;
+    private readonly float forwardSpeed = 500f;
     private readonly float sideSpeed = 500f;
 
     private Rigidbody rigidBody;
@@ -23,11 +23,14 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.AddForce(0, 0, forwardSpeed * Time.fixedDeltaTime);
 
         //Directional Controls
+        //RIGHT
         if (Input.GetKey("d"))
         {
             rigidBody.AddForce(sideSpeed * Time.fixedDeltaTime, 0, 0);
         }
-        else if (Input.GetKey("a"))
+
+        //LEFT
+        if (Input.GetKey("a"))
         {
             rigidBody.AddForce(-sideSpeed * Time.fixedDeltaTime, 0, 0);
         }
