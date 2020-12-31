@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private readonly float forwardSpeed = 500f;
-    private readonly float sideSpeed = 500f;
+    private readonly float forwardSpeed = 4000f;
+    private readonly float sideSpeed = 50f;
 
     private Rigidbody rigidBody;
 
@@ -26,13 +26,13 @@ public class PlayerMovement : MonoBehaviour
         //RIGHT
         if (Input.GetKey("d"))
         {
-            rigidBody.AddForce(sideSpeed * Time.fixedDeltaTime, 0, 0);
+            rigidBody.AddForce(sideSpeed * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         //LEFT
         if (Input.GetKey("a"))
         {
-            rigidBody.AddForce(-sideSpeed * Time.fixedDeltaTime, 0, 0);
+            rigidBody.AddForce(-sideSpeed * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
