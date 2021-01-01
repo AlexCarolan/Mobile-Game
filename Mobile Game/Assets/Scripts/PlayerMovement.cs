@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    private readonly float forwardSpeed = 4000f;
-    private readonly float sideSpeed = 50f;
+    public float forwardSpeed = 4000f;
+    public float sideSpeed = 50f;
 
     private Rigidbody rigidBody;
 
