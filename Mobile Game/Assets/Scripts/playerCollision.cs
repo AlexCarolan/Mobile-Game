@@ -14,7 +14,7 @@ public class PlayerCollision : MonoBehaviour
     float cubesPivotDistance;
     Vector3 cubesPivot;
 
-    public float explosionForce = 5f;
+    public float explosionForce;
 
     private void Start()
     {
@@ -107,6 +107,7 @@ public class PlayerCollision : MonoBehaviour
 
         //set tag
         piece.tag = "Player";
+        
 
     }
 
