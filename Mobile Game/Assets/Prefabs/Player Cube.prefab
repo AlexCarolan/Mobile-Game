@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5b341894dde44aa98991654c553d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forwardSpeed: 4000
+  sideSpeed: 50
 --- !u!114 &3301897367477984065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a1eb0f7eebe43468992ffa59765780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRed: {fileID: 2100000, guid: e9d697f2b056c4387bb074a7d0997f1c, type: 2}
+  cubeSize: 0.2
+  cubesInRow: 5
+  explosionForce: 1
+  explosionRadius: 1
+  explosionUpward: 1
