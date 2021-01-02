@@ -6,6 +6,7 @@ public class PlayerCollision : MonoBehaviour
     private PlayerCameraTether playerCameraTether;
 
     public Material playerRed;
+    public Transform groundTransform;
 
     public float cubeSize = 0.2f;
     public int cubesInRow = 5;
@@ -26,15 +27,35 @@ public class PlayerCollision : MonoBehaviour
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
 
+    private void Update()
+    {
+        float playerX = this.GetComponent<Transform>().position.x;
+
+        if (playerX >= (groundTransform.localScale.x/2))
+        {
+            EndGame();
+        }
+        else if (playerX <= -(groundTransform.localScale.x / 2))
+        {
+            EndGame();
+        }
+
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
-            playerMovement.enabled = false;
-            playerCameraTether.enabled = false;
-
-            Explode();
+            EndGame();
         }
+    }
+
+    void EndGame()
+    {
+        playerMovement.enabled = false;
+        playerCameraTether.enabled = false;
+
+        Explode();
     }
 
     public void Explode()
@@ -60,7 +81,7 @@ public class PlayerCollision : MonoBehaviour
 
         foreach (GameObject cube in cubes)
         {
-            cube.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, explosionForce), ForceMode.Impulse);
+            cube.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0.01f, 1f) + endVelocity.x / 10, Random.Range(0.01f, 0.5f), explosionForce), ForceMode.Impulse);
         }
 
 
@@ -74,7 +95,7 @@ public class PlayerCollision : MonoBehaviour
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
         //set piece position and scale
-        piece.transform.position = transform.position + new Vector3(cubeSize * x + 0.1f, cubeSize * y + 0.1f , cubeSize * z + 0.1f) - cubesPivot;
+        piece.transform.position = transform.position + new Vector3(cubeSize * x + 0.1f, cubeSize * y + 0.1f, cubeSize * z + 0.1f) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
 
         //add rigidbody and set mass

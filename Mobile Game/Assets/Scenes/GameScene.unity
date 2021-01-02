@@ -1453,6 +1453,11 @@ PrefabInstance:
       propertyPath: explosionUpward
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3301897367477984065, guid: 522522a50800d4d5fad4cd67186e4437,
+        type: 3}
+      propertyPath: groundTransform
+      value: 
+      objectReference: {fileID: 1343199914}
     - target: {fileID: 3301897367477984071, guid: 522522a50800d4d5fad4cd67186e4437,
         type: 3}
       propertyPath: m_RootOrder
