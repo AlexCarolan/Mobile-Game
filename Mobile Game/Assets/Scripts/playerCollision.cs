@@ -1,25 +1,37 @@
 ﻿using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private PlayerCameraTether playerCameraTether;
 
+    private Transform playerTransform;
+
     public Material playerRed;
     public Transform groundTransform;
 
+    public GameObject scoreCounterUI;
+
     public float cubeSize = 0.2f;
     public int cubesInRow = 5;
+
+    public GameObject highscoreUI;
 
     float cubesPivotDistance;
     Vector3 cubesPivot;
 
     public float explosionForce;
 
+    public bool gameEnded = false;
+
     private void Start()
     {
         playerMovement = this.GetComponent<PlayerMovement>();
         playerCameraTether = GameObject.FindGameObjectsWithTag("MainCamera")[0].GetComponent<PlayerCameraTether>();
+
+        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
@@ -29,15 +41,28 @@ public class PlayerCollision : MonoBehaviour
 
     private void Update()
     {
+        //Check edged of out of bounds
         float playerX = this.GetComponent<Transform>().position.x;
 
-        if (playerX >= (groundTransform.localScale.x/2))
+        if (!gameEnded)
         {
-            EndGame();
+            if (playerX >= (groundTransform.localScale.x / 2))
+            {
+                EndGame();
+            }
+            else if (playerX <= -(groundTransform.localScale.x / 2))
+            {
+                EndGame();
+            }
         }
-        else if (playerX <= -(groundTransform.localScale.x / 2))
-        {
-            EndGame();
+
+        //Check for game restart trigger
+        if (gameEnded)
+        { 
+            if (Input.GetKeyDown("space"))
+            {
+                SceneManager.LoadScene("GameScene");
+            }
         }
 
     }
@@ -52,8 +77,24 @@ public class PlayerCollision : MonoBehaviour
 
     void EndGame()
     {
+        gameEnded = true;
+
         playerMovement.enabled = false;
         playerCameraTether.enabled = false;
+
+        highscoreUI.SetActive(true);
+        ScoreCounter scoreCounter = scoreCounterUI.GetComponent<ScoreCounter>();
+
+        if (!PlayerPrefs.HasKey("Highscore"))
+        {
+            PlayerPrefs.SetInt("Highscore", scoreCounter.score);
+        }
+        else if (PlayerPrefs.GetInt("Highscore") < scoreCounter.score)
+        {
+            PlayerPrefs.SetInt("Highscore", scoreCounter.score);
+        }
+
+        highscoreUI.GetComponent<TextMeshProUGUI>().SetText("HIGH SCORE " + PlayerPrefs.GetInt("Highscore"));
 
         Explode();
     }
@@ -63,7 +104,8 @@ public class PlayerCollision : MonoBehaviour
         Vector3 endVelocity = this.GetComponent<Rigidbody>().velocity;
 
         //make object disappear
-        gameObject.SetActive(false);
+        this.GetComponent<BoxCollider>().enabled = false;
+        this.GetComponent<MeshRenderer>().enabled = false;
 
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++)

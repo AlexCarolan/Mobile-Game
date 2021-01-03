@@ -7,6 +7,8 @@ public class ScoreCounter : MonoBehaviour
 {
     private TextMeshProUGUI textMesh;
     private Transform playerTransform;
+    public PlayerCollision collision;
+    public int score;
 
     void Start()
     {
@@ -16,7 +18,10 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        float score = playerTransform.position.z / 8;
-        textMesh.SetText(score.ToString("0"));
+        if (!collision.gameEnded)
+        {
+            score = (int)playerTransform.position.z / 8;
+            textMesh.SetText(score.ToString("0"));
+        }
     }
 }
