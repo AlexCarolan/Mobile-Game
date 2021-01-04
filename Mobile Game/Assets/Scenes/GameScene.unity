@@ -432,7 +432,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.1468946e-38, z: 3.4438e-41, w: 20153.016}
+  m_BoundingSphereOverride: {x: 0, y: 0.0000000013414425, z: 1e-45, w: 1.5e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -769,9 +769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxActiveParts: 10
+  blockPrefabCount: 5
   startBlock: {fileID: 1343199914}
   playerPosition: {fileID: 789901326}
-  test: {fileID: 4252892659216205622, guid: 7d46501e2b61d4876af07120a1069376, type: 3}
 --- !u!4 &1151932505
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,6 +1112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Drag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301897367477984443, guid: 522522a50800d4d5fad4cd67186e4437,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 3301897367477984443, guid: 522522a50800d4d5fad4cd67186e4437,
         type: 3}
