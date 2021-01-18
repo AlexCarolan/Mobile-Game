@@ -55,7 +55,7 @@ public class GenerateLevel : MonoBehaviour
 
         GameObject randomBlock = blockPrefabs[random];
 
-        endPosition = endPosition + (randomBlock.transform.Find("Floor").GetComponent<Transform>().localScale.z / 2);
+        endPosition += (randomBlock.transform.Find("Floor").GetComponent<Transform>().localScale.z / 2);
 
         Instantiate(randomBlock, new Vector3(0, 0, endPosition), Quaternion.identity);
 

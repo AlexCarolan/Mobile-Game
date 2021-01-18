@@ -432,7 +432,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.5916324e-37, z: 3.4438e-41, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 7.54e-43, z: 0, w: -1}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxActiveParts: 10
-  blockPrefabCount: 7
+  blockPrefabCount: 8
   startBlock: {fileID: 1343199914}
   playerPosition: {fileID: 789901326}
 --- !u!4 &1151932505
@@ -1016,7 +1016,7 @@ PrefabInstance:
     - target: {fileID: 3301897367477984065, guid: 522522a50800d4d5fad4cd67186e4437,
         type: 3}
       propertyPath: explosionForce
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3301897367477984065, guid: 522522a50800d4d5fad4cd67186e4437,
         type: 3}
