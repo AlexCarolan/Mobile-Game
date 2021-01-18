@@ -1,156 +1,1 @@
-﻿using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
-
-public class PlayerCollision : MonoBehaviour
-{
-    private PlayerMovement playerMovement;
-    private PlayerCameraTether playerCameraTether;
-
-    private Transform playerTransform;
-
-    public Material playerRed;
-    public Transform groundTransform;
-
-    public GameObject scoreCounterUI;
-
-    public float cubeSize = 0.2f;
-    public int cubesInRow = 5;
-
-    public GameObject highscoreUI;
-
-    float cubesPivotDistance;
-    Vector3 cubesPivot;
-
-    public float explosionForce;
-
-    public bool gameEnded = false;
-
-    private void Start()
-    {
-        playerMovement = this.GetComponent<PlayerMovement>();
-        playerCameraTether = GameObject.FindGameObjectsWithTag("MainCamera")[0].GetComponent<PlayerCameraTether>();
-
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-
-        //calculate pivot distance
-        cubesPivotDistance = cubeSize * cubesInRow / 2;
-        //use this value to create pivot vector)
-        cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
-    }
-
-    private void Update()
-    {
-        //Check edged of out of bounds
-        float playerX = this.GetComponent<Transform>().position.x;
-
-        if (!gameEnded)
-        {
-            if (playerX >= (groundTransform.localScale.x / 2))
-            {
-                EndGame();
-            }
-            else if (playerX <= -(groundTransform.localScale.x / 2))
-            {
-                EndGame();
-            }
-        }
-
-        //Check for game restart trigger
-        if (gameEnded)
-        { 
-            if (Input.GetKeyDown("space"))
-            {
-                SceneManager.LoadScene("GameScene");
-            }
-        }
-
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Obstacle"))
-        {
-            EndGame();
-        }
-    }
-
-    void EndGame()
-    {
-        gameEnded = true;
-
-        playerMovement.enabled = false;
-        playerCameraTether.enabled = false;
-
-        highscoreUI.SetActive(true);
-        ScoreCounter scoreCounter = scoreCounterUI.GetComponent<ScoreCounter>();
-
-        if (!PlayerPrefs.HasKey("Highscore"))
-        {
-            PlayerPrefs.SetInt("Highscore", scoreCounter.score);
-        }
-        else if (PlayerPrefs.GetInt("Highscore") < scoreCounter.score)
-        {
-            PlayerPrefs.SetInt("Highscore", scoreCounter.score);
-        }
-
-        highscoreUI.GetComponent<TextMeshProUGUI>().SetText("HIGH SCORE " + PlayerPrefs.GetInt("Highscore"));
-
-        Explode();
-    }
-
-    public void Explode()
-    {
-        Vector3 endVelocity = this.GetComponent<Rigidbody>().velocity;
-
-        //make object disappear
-        this.GetComponent<BoxCollider>().enabled = false;
-        this.GetComponent<MeshRenderer>().enabled = false;
-
-        //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
-        for (int x = 0; x < cubesInRow; x++)
-        {
-            for (int y = 0; y < cubesInRow; y++)
-            {
-                for (int z = 0; z < cubesInRow; z++)
-                {
-                    CreatePiece(x, y, z);
-                }
-            }
-        }
-
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Player");
-
-        foreach (GameObject cube in cubes)
-        {
-            cube.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0.01f, 1f) + endVelocity.x / 10, Random.Range(0.01f, 0.5f), explosionForce), ForceMode.Impulse);
-        }
-
-
-    }
-
-    private void CreatePiece(int x, int y, int z)
-    {
-
-        //create piece
-        GameObject piece;
-        piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-        //set piece position and scale
-        piece.transform.position = transform.position + new Vector3(cubeSize * x + 0.1f, cubeSize * y + 0.1f, cubeSize * z + 0.1f) - cubesPivot;
-        piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
-
-        //add rigidbody and set mass
-        piece.AddComponent<Rigidbody>();
-        piece.GetComponent<Rigidbody>().mass = cubeSize;
-
-        //set material
-        piece.GetComponent<Renderer>().material = playerRed;
-
-        //set tag
-        piece.tag = "Player";
-        
-
-    }
-
-}
+﻿using UnityEngine;using TMPro;using UnityEngine.SceneManagement;public class PlayerCollision : MonoBehaviour{    private PlayerMovement playerMovement;    private PlayerCameraTether playerCameraTether;    private Transform playerTransform;    public Material playerRed;    public Transform groundTransform;    public GameObject scoreCounterUI;    public float cubeSize = 0.2f;    public int cubesInRow = 5;    public GameObject highscoreUI;    float cubesPivotDistance;    Vector3 cubesPivot;    public float explosionForce;    public bool gameEnded = false;    private void Start()    {        playerMovement = this.GetComponent<PlayerMovement>();        playerCameraTether = GameObject.FindGameObjectsWithTag("MainCamera")[0].GetComponent<PlayerCameraTether>();        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();        //calculate pivot distance        cubesPivotDistance = cubeSize * cubesInRow / 2;        //use this value to create pivot vector)        cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);    }    private void Update()    {        //Check edged of out of bounds        float playerX = this.GetComponent<Transform>().position.x;        if (!gameEnded)        {            if (playerX >= (groundTransform.localScale.x / 2))            {                EndGame();            }            else if (playerX <= -(groundTransform.localScale.x / 2))            {                EndGame();            }        }        //Check for game restart trigger        if (gameEnded)        {             if (Input.GetKeyDown("space"))            {                SceneManager.LoadScene("GameScene");            }        }    }    void OnCollisionEnter(Collision collision)    {        if (collision.collider.CompareTag("Obstacle"))        {            EndGame();        }    }    void EndGame()    {        gameEnded = true;        playerMovement.enabled = false;        playerCameraTether.enabled = false;        highscoreUI.SetActive(true);        ScoreCounter scoreCounter = scoreCounterUI.GetComponent<ScoreCounter>();        if (!PlayerPrefs.HasKey("Highscore"))        {            PlayerPrefs.SetInt("Highscore", scoreCounter.score);        }        else if (PlayerPrefs.GetInt("Highscore") < scoreCounter.score)        {            PlayerPrefs.SetInt("Highscore", scoreCounter.score);        }        highscoreUI.GetComponent<TextMeshProUGUI>().SetText("HIGH SCORE " + PlayerPrefs.GetInt("Highscore"));        Explode();    }    public void Explode()    {        Vector3 endVelocity = this.GetComponent<Rigidbody>().velocity;        //make object disappear        this.GetComponent<BoxCollider>().enabled = false;        this.GetComponent<MeshRenderer>().enabled = false;        //loop 3 times to create 5x5x5 pieces in x,y,z coordinates        for (int x = 0; x < cubesInRow; x++)        {            for (int y = 0; y < cubesInRow; y++)            {                for (int z = 0; z < cubesInRow; z++)                {                    CreatePiece(x, y, z);                }            }        }        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Player");        foreach (GameObject cube in cubes)        {            cube.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0.01f, 1f) + endVelocity.x / 10, Random.Range(0.01f, 0.5f), explosionForce), ForceMode.Impulse);        }    }    private void CreatePiece(int x, int y, int z)    {        //create piece        GameObject piece;        piece = GameObject.CreatePrimitive(PrimitiveType.Cube);        //set piece position and scale        piece.transform.position = transform.position + new Vector3(cubeSize * x + 0.1f, cubeSize * y + 0.1f, cubeSize * z + 0.1f) - cubesPivot;        piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);        //add rigidbody and set mass        piece.AddComponent<Rigidbody>();        piece.GetComponent<Rigidbody>().mass = cubeSize;        //set material        piece.GetComponent<Renderer>().material = playerRed;        //set tag        piece.tag = "Player";            }}
