@@ -6,4 +6,4 @@ The aim is to get as far as possible without hitting a wall or falling off the e
 
 ## Gameplay
 
-![Game in action](https://alexcarolan.github.io/img/mobile-game.png)
+![Game in action](https://alexcarolan.github.io/img/portfolio-1.gif)
