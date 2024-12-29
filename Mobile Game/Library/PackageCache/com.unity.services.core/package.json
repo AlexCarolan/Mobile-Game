@@ -1,0 +1,28 @@
+{
+  "name": "com.unity.services.core",
+  "displayName": "Services Core",
+  "version": "1.14.0",
+  "unity": "2021.3",
+  "description": "This package defines common components used by multiple Game Service packages.\nThese are standardized and aim to unify the overall experience of working with Game Services SDK.",
+  "dependencies": {
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.modules.androidjni": "1.0.0"
+  },
+  "relatedPackages": {
+    "com.unity.services.core.tests": "1.14.0"
+  },
+  "_upm": {
+    "changelog": "### Added\n\n- Added `ServicesInitialization` monobehaviour to manage services in the scene authoring.\n- Added `ServicesBehaviour` abstract monobehaviour as a base for behaviours built on top of services.\n- Added unique identifier for custom service registry creation (`UnityServices.CreateServices`).\n- Added custom services registries dictionary in `UnityServices.Services`.\n- Added `GetIdentifier()` method to `IUnityServices` interface with a default implementation.\n\n### Changed\n\n- Updated the minimum supported Editor version to 2021.3."
+  },
+  "upmCi": {
+    "footprint": "06736de7a083dbfc9f708a5fa132ee56677e1ae0"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.core@1.14/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git",
+    "type": "git",
+    "revision": "64962022211031c9e26ceec024d3587ea8e05a17"
+  },
+  "_fingerprint": "9e81a5e382457b799480b311ce51187be99abbbf"
+}

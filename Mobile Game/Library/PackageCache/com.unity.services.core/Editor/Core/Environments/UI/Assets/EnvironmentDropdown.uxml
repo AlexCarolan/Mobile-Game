@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.core/Editor/Core/Environments/UI/Assets/EnvironmentDropdown.uss" />
+    <ui:VisualElement name="DropdownContainer" class="dropdown-control-container">
+        <ui:DropdownField label="Editor Environment" name="DropdownControl" index="-1" class="no-margin dropdown-control" />
+        <ui:Button text="Refresh" display-tooltip-when-elided="true" name="RefreshDropdownButton" class="dropdown-refresh-button" />
+    </ui:VisualElement>
+</ui:UXML>

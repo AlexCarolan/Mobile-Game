@@ -1,0 +1,203 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Services.Analytics
+{
+    public class AcquisitionSourceEvent : Event
+    {
+        public string AcquisitionCampaignId { set; }
+        public string AcquisitionCampaignName { set; }
+        public string AcquisitionCampaignType { set; }
+        public string AcquisitionChannel { set; }
+        public float AcquisitionCost { set; }
+        public string AcquisitionCostCurrency { set; }
+        public string AcquisitionCreativeId { set; }
+        public string AcquisitionNetwork { set; }
+        public string AcquisitionProvider { set; }
+        public AcquisitionSourceEvent() {}
+        public override void Validate();
+    }
+
+    public enum AdCompletionStatus
+    {
+        Completed = 0,
+        Incomplete = 2,
+        Partial = 1,
+    }
+
+    public class AdImpressionEvent : Event
+    {
+        public AdCompletionStatus AdCompletionStatus { set; }
+        public double AdEcpmUsd { set; }
+        public bool AdHasClicked { set; }
+        public string AdImpressionId { set; }
+        public long AdLengthMs { set; }
+        public string AdMediaType { set; }
+        public AdProvider AdProvider { set; }
+        public string AdSdkVersion { set; }
+        public string AdSource { set; }
+        public string AdStatusCallback { set; }
+        public string AdStoreDestinationId { set; }
+        public long AdTimeCloseButtonShownMs { set; }
+        public long AdTimeWatchedMs { set; }
+        public string PlacementId { set; }
+        public string PlacementName { set; }
+        public AdPlacementType PlacementType { set; }
+        public AdImpressionEvent() {}
+        public override void Validate();
+    }
+
+    public enum AdPlacementType
+    {
+        BANNER = 0,
+        INTERSTITIAL = 2,
+        OTHER = 3,
+        REWARDED = 1,
+    }
+
+    public enum AdProvider
+    {
+        AdColony = 0,
+        AdMob = 1,
+        Amazon = 2,
+        AppLovin = 3,
+        ChartBoost = 4,
+        Facebook = 5,
+        Fyber = 6,
+        Hyprmx = 7,
+        Inmobi = 8,
+        IrnSource = 14,
+        Maio = 9,
+        Other = 15,
+        Pangle = 10,
+        Tapjoy = 11,
+        UnityAds = 12,
+        Vungle = 13,
+    }
+
+    public static class AnalyticsService
+    {
+        public static IAnalyticsService Instance { get; }
+    }
+
+    public class CustomEvent : Event, System.Collections.IEnumerable
+    {
+        public object this[string key] { set; }
+        public CustomEvent(string name) {}
+        public void Add(string key, object value);
+        public System.Collections.IEnumerator GetEnumerator();
+    }
+
+    public abstract class Event
+    {
+        protected Event(string name) {}
+        protected bool ParameterHasBeenSet(string name);
+        public virtual void Reset();
+        protected void SetParameter(string name, bool value);
+        protected void SetParameter(string name, double value);
+        protected void SetParameter(string name, int value);
+        protected void SetParameter(string name, long value);
+        protected void SetParameter(string name, float value);
+        protected void SetParameter(string name, string value);
+        public virtual void Validate();
+    }
+
+    public interface IAnalyticsService
+    {
+        public string PrivacyUrl { get; }
+        public string SessionID { get; }
+        public long ConvertCurrencyToMinorUnits(string currencyCode, double value);
+        public void Flush();
+        public string GetAnalyticsUserID();
+        public void RecordEvent(string eventName);
+        public void RecordEvent(Event e);
+        public void RequestDataDeletion();
+        public void StartDataCollection();
+        public void StopDataCollection();
+    }
+
+    public static class SdkVersion
+    {
+        public static readonly string SDK_VERSION = @"6.0.1";
+    }
+
+    public class TransactionEvent : Event
+    {
+        public string PaymentCountry { set; }
+        public string ProductId { set; }
+        public System.Collections.Generic.List<TransactionItem> ReceivedItems { get; }
+        public TransactionRealCurrency ReceivedRealCurrency { get; set; }
+        public System.Collections.Generic.List<TransactionVirtualCurrency> ReceivedVirtualCurrencies { get; }
+        public System.Collections.Generic.List<TransactionItem> SpentItems { get; }
+        public TransactionRealCurrency SpentRealCurrency { get; set; }
+        public System.Collections.Generic.List<TransactionVirtualCurrency> SpentVirtualCurrencies { get; }
+        public string StoreId { set; }
+        public string StoreItemId { set; }
+        public string StoreItemSkuId { set; }
+        public string StoreSourceId { set; }
+        public string TransactionId { set; }
+        public string TransactionName { set; }
+        public string TransactionReceipt { set; }
+        public string TransactionReceiptSignature { set; }
+        public TransactionServer TransactionServer { set; }
+        public TransactionType TransactionType { set; }
+        public string TransactorID { set; }
+        public TransactionEvent() {}
+        protected TransactionEvent(string name) {}
+        public override void Reset();
+        public override void Validate();
+    }
+
+    public class TransactionFailedEvent : TransactionEvent
+    {
+        public string FailureReason { set; }
+        public TransactionFailedEvent() {}
+        public override void Validate();
+    }
+
+    public class TransactionItem
+    {
+        public long ItemAmount;
+        public string ItemName;
+        public string ItemType;
+        public TransactionItem() {}
+    }
+
+    public class TransactionRealCurrency
+    {
+        public long RealCurrencyAmount;
+        public string RealCurrencyType;
+        public TransactionRealCurrency() {}
+    }
+
+    public enum TransactionServer
+    {
+        AMAZON = 1,
+        APPLE = 0,
+        GOOGLE = 2,
+        VALVE = 3,
+    }
+
+    public enum TransactionType
+    {
+        INVALID = 0,
+        PURCHASE = 2,
+        SALE = 1,
+        TRADE = 3,
+    }
+
+    public class TransactionVirtualCurrency
+    {
+        public long VirtualCurrencyAmount;
+        public string VirtualCurrencyName;
+        public VirtualCurrencyType VirtualCurrencyType;
+        public TransactionVirtualCurrency() {}
+    }
+
+    public enum VirtualCurrencyType
+    {
+        GRIND = 0,
+        PREMIUM = 1,
+        PREMIUM_GRIND = 2,
+    }
+}

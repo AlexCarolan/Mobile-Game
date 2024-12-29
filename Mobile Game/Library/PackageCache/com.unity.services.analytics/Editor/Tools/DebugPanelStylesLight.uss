@@ -1,0 +1,11 @@
+.event-stream-item-icon-uploaded {
+    background-image:resource("Packages/com.unity.services.analytics/Editor/Tools/Checkmark.png");
+}
+
+.event-stream-item-icon-uploading {
+    background-image:resource("Packages/com.unity.services.analytics/Editor/Tools/Loading.png");
+}
+
+.event-stream-item-icon-discarded {
+    background-image:resource("Packages/com.unity.services.analytics/Editor/Tools/Error.png");
+}

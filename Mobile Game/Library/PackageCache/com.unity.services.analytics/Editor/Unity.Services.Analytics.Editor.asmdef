@@ -1,0 +1,34 @@
+{
+    "name": "Unity.Services.Analytics.Editor",
+    "rootNamespace": "Unity.Services.Analytics",
+    "references": [
+        "Unity.Services.Core.Internal",
+        "Unity.Services.Core.Editor",
+        "Unity.Services.Core",
+        "Unity.Services.Analytics",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.Services.DeploymentApi",
+        "Unity.Services.Core.Environments.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "defineConstraints": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Moq.dll"
+    ],
+    "autoReferenced": false,
+    "versionDefines": [
+        {
+            "name": "nuget.moq",
+            "expression": "1.0.0",
+            "define": "NUGET_MOQ_AVAILABLE"
+        }
+    ],
+    "noEngineReferences": false
+}

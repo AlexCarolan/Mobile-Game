@@ -1,0 +1,27 @@
+{
+    "name": "Unity.Services.Core.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Services.Core",
+        "Unity.Services.Core.Components",
+        "Unity.Services.Core.Configuration",
+        "Unity.Services.Core.Configuration.Editor",
+        "Unity.Services.Core.Environments",
+        "Unity.Services.Core.Internal",
+        "Unity.Services.Core.Networking",
+        "Unity.Services.Core.Registration",
+        "Unity.Services.Core.Scheduler",
+        "Unity.Services.Core.Telemetry"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

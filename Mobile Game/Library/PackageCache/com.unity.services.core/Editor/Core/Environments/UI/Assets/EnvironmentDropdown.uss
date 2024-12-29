@@ -1,0 +1,15 @@
+.dropdown-control-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-control {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.dropdown-refresh-button {
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-left: 5px;
+}

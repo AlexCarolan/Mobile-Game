@@ -1,0 +1,67 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.unity.services.analytics/Editor/Tools/DebugPanelStyles.uss?fileID=7433441132597879392&amp;guid=aa0c67bb08888624b86deb74de3ddba0&amp;type=3#DebugPanelStyles" />
+    <ui:ScrollView mode="Vertical" horizontal-scroller-visibility="Hidden" horizontal-page-size="0" style="flex-grow: 1;">
+        <ui:VisualElement name="rootVisualContainer2" style="flex-grow: 1;">
+            <ui:HelpBox class="unity-help-box" style="margin-top: 3px; overflow: hidden;">
+                <ui:VisualElement class="unity-help-box__icon unity-help-box__icon--info" />
+                <ui:VisualElement style="overflow: hidden;">
+                    <ui:TextElement text="Only events with pre-defined schemas will be recognized as valid by the Analytics service." class="unity-text-element main-help-box-text" />
+                    <ui:VisualElement class="main-help-box-text" style="overflow: hidden;">
+                        <ui:TextElement text="To manage your events, visit the " class="unity-text-element" />
+                        <ui:TextElement text=" Event Manager" name="main-help-link-manager-text" class="unity-text-element link-button" />
+                        <ui:VisualElement name="main-help-link-manager-icon" class="external-link-icon" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="main-help-box-text" style="overflow: hidden;">
+                        <ui:TextElement text="To review recorded events, visit the " class="unity-text-element" />
+                        <ui:TextElement text=" Event Browser" name="main-help-link-browser-text" class="unity-text-element link-button" />
+                        <ui:VisualElement name="main-help-link-browser-icon" class="external-link-icon" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:HelpBox>
+            <ui:VisualElement class="sdk-status-box">
+                <ui:Label text="SDK State" class="unity-text-element unity-label" />
+                <ui:VisualElement name="state-indicator-icon" class="sdk-status-icon-uninitialised" />
+                <ui:TextElement text="Edit Mode" name="state-indicator-text" class="unity-text-element" />
+            </ui:VisualElement>
+            <ui:Foldout value="true" text="User Details" class="unity-foldout analytics-foldout user-ids-area unity-foldout--depth-0">
+                <ui:TextField label="Analytics User ID" readonly="true" tooltip="The user ID to which all events will be attributed. This may be the External User ID if one is set, otherwise it will be the Installation ID." name="ids-user-id" class="unity-base-field unity-base-text-field unity-text-field" />
+                <ui:TextField label="Installation ID" readonly="true" name="ids-installation-id" class="unity-base-field unity-base-text-field unity-text-field" />
+                <ui:TextField label="External User ID" readonly="true" name="ids-external-id" class="unity-base-field unity-base-text-field unity-text-field" />
+                <ui:TextField label="Player ID" readonly="true" name="ids-player-id" class="unity-base-field unity-base-text-field unity-text-field" />
+            </ui:Foldout>
+            <ui:Foldout text="Activity" class="unity-foldout analytics-foldout unity-foldout--depth-0" style="flex-grow: 1;">
+                <ui:VisualElement class="upload-control">
+                    <ui:Label text="Next Upload" class="unity-text-element unity-label" />
+                    <ui:TextElement name="next-upload-indicator" text="-" class="unity-text-element" />
+                    <ui:Button name="next-upload-force-button" class="unity-text-element unity-button unity-disabled">
+                        <ui:Label text="Upload Now" tooltip="Immediately uploads any events that are currently batched and awaiting upload. Note that this will do nothing if there are no events queued or if a flush is already in progress." class="unity-text-element unity-label" />
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Button name="event-stream-clear-button" class="unity-text-element unity-button unity-disabled">
+                    <ui:Label text="Clear" class="unity-text-element unity-label" />
+                </ui:Button>
+                <ui:ListView name="event-stream-list" show-alternating-row-backgrounds="All" fixed-item-height="18" show-border="true" class="unity-collection-view unity-list-view event-stream-container" style="display: none; min-height: 170px;" />
+                <ui:VisualElement name="event-stream-empty" class="unity-collection-view--with-border empty-stream-container" style="display: flex; overflow: hidden; min-height: 170px;">
+                    <ui:VisualElement class="empty-area-label">
+                        <ui:Label text="Events are not recorded while in Edit Mode" name="event-stream-empty-main-text" class="unity-text-element unity-label empty-area-label-content" />
+                        <ui:VisualElement name="event-stream-empty-privacy-link" class="empty-stream-privacy-link">
+                            <ui:TextElement text="Privacy Overview" name="event-stream-empty-privacy-link-text" class="unity-text-element link-button" style="display: flex;" />
+                            <ui:VisualElement name="event-stream-empty-privacy-link-icon" class="external-link-icon" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement focusable="true" class="payload-container">
+                    <ui:Foldout text="Event Payload" value="true" class="unity-foldout payload-container unity-foldout--depth-1">
+                        <ui:ScrollView horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="AlwaysVisible" name="payload-scrollview" mode="VerticalAndHorizontal" class="unity-scroll-view unity-scroll-view--scroll unity-scroll-view--vertical-horizontal payload-inspector" style="flex-grow: 1; min-height: 150px;">
+                            <ui:TextField multiline="true" readonly="true" name="payload-display" class="unity-base-field unity-base-field--no-label unity-base-text-field unity-text-field payload-inspector" style="flex-grow: 1;" />
+                        </ui:ScrollView>
+                        <ui:Label text="Select an event to view its payload" name="payload-empty-label" class="unity-text-element unity-label empty-area-label" style="flex-grow: 1; display: none; min-height: 150px;" />
+                    </ui:Foldout>
+                </ui:VisualElement>
+                <ui:Button name="payload-copy-button" class="unity-text-element unity-button">
+                    <ui:Label text="Copy Payload to Clipboard" class="unity-text-element unity-label" />
+                </ui:Button>
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

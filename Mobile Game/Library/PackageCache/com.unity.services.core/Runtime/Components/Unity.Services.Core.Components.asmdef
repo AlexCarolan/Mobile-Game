@@ -1,0 +1,11 @@
+{
+    "name": "Unity.Services.Core.Components",
+    "references": [
+        "Unity.Services.Core",
+        "Unity.Services.Core.Internal",
+        "Unity.Services.Core.Environments"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "autoReferenced": true
+}

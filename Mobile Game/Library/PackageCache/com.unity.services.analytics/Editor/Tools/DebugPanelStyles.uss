@@ -1,0 +1,273 @@
+.main-window {
+    flex-grow: 1;
+}
+
+.main-window Button:active {
+    background-color: var(--unity-colors-button-background-pressed);
+}
+
+.main-window Button:active:hover {
+    background-color: var(--unity-colors-button-background-hover_pressed);
+}
+
+.main-help-box-text {
+    font-size: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.sdk-status-box {
+    margin: 10px 10px 10px 18px;
+    flex-direction: row;
+}
+
+.sdk-status-box Label {
+    min-width: 135px;
+    -unity-font-style: bold;
+}
+
+.sdk-status-icon-uninitialised {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-right: 3px;
+    align-self: center;
+    flex-wrap: wrap;
+    background-image: resource('Packages/com.unity.services.analytics/Editor/Tools/StateUninitialised.png');
+}
+
+.sdk-status-icon-inactive {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-right: 3px;
+    align-self: center;
+    flex-wrap: wrap;
+    background-image: resource('Packages/com.unity.services.analytics/Editor/Tools/StateInactive.png');
+}
+
+.sdk-status-icon-active {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-right: 3px;
+    align-self: center;
+    flex-wrap: wrap;
+    background-image: resource('Packages/com.unity.services.analytics/Editor/Tools/StateActive.png');
+}
+
+.link-button {
+    cursor: link;
+    flex-wrap: wrap;
+}
+
+.unity-text-element.link-button {
+    color: var(--unity-colors-link-text);
+}
+
+.external-link-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    cursor: link;
+    background-image: resource('Packages/com.unity.services.core/Editor/Core/UiHelpers/Images/ExternalLinkIcon.png');
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+.analytics-foldout #unity-content {
+    flex-grow: 1;
+}
+
+.analytics-foldout Toggle {
+    background-color: var(--unity-colors-inspector_titlebar-background);
+    border-top-color: var(--unity-colors-button-border_accent);
+    border-bottom-color: var(--unity-colors-button-border);
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    border-top-width: 0.75px;
+    border-bottom-width: 0.75px;
+    -unity-font-style: bold;
+}
+
+.analytics-foldout Toggle:hover {
+    background-color: var(--unity-colors-inspector_titlebar-background-hover);
+}
+
+.analytics-foldout .unity-foldout__content {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.user-ids-area TextInput {
+    background-color: var(--unity-colors-window-background);
+}
+
+.upload-control {
+    min-height: 22px;
+    max-height: 22px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.upload-control Label {
+    min-width: 135px;
+    margin-left: 3px;
+    padding-left: 1px;
+    -unity-text-align: middle-left;
+}
+
+.upload-control Button {
+    flex-grow: 1;
+}
+
+.upload-control Button Label {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    -unity-text-align: middle-center;
+}
+
+.upload-control #next-upload-indicator {
+    margin-left: 6px;
+    min-width: 60px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+}
+
+.empty-stream-container {
+    flex-grow: 1;
+}
+
+.empty-stream-privacy-link {
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+}
+
+.event-stream-container {
+    flex-grow: 1;
+}
+
+.event-stream-item {
+    flex-direction: row;
+    padding: 2px 2px 2px 4px;
+}
+
+.event-stream-item-timestamp {
+    min-width: 64px;
+}
+
+.event-stream-item-name {
+    flex-grow: 1;
+}
+
+.event-stream-item-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.event-stream-container .unity-list-view__empty-label {
+    align-content: center;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.payload-container {
+    margin-top: 2px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-color: var(--unity-colors-object_field-border);
+    border-bottom-color: var(--unity-colors-object_field-border);
+    border-left-color: var(--unity-colors-object_field-border);
+    border-right-color: var(--unity-colors-object_field-border);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.payload-container .unity-foldout {
+    margin-top: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    flex-grow: 1;
+}
+
+.payload-container .unity-foldout__content {
+    margin-top: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    flex-grow: 1;
+    max-height: 150px;
+}
+
+.payload-container Toggle {
+    background-color: var(--unity-colors-window-background);
+    border-top-color: var(--unity-colors-window-background);
+    border-bottom-color: var(--unity-colors-window-background);
+}
+
+.payload-container Toggle:hover {
+    background-color: var(--unity-colors-window-background);
+    border-top-color: var(--unity-colors-window-background);
+    border-bottom-color: var(--unity-colors-window-background);
+}
+
+.payload-inspector ScrollView {
+    flex-grow: 1;
+}
+
+.payload-inspector TextInput {
+    margin: 0 0 0 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    background-color: var(--unity-colors-window-background);
+    flex-direction: column;
+}
+
+.payload-inspector-content:hover TextInput {
+    background-color: var(--unity-colors-window-background);
+}
+
+.payload-inspector #unity-content-container {
+    max-width: 10000px;
+}
+
+.empty-area-label {
+    align-content: center;
+    align-self: center;
+    flex-direction: column;
+    flex-basis: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.empty-area-label-content {
+    white-space: normal;
+}
+
+.payload-inspector {
+}
+
+#unity-content-container {
+    flex-grow: 1;
+}

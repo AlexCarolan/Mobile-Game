@@ -1,0 +1,34 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Services.Core.Components
+{
+    public abstract class ServicesBehaviour : UnityEngine.MonoBehaviour
+    {
+        [Unity.Services.Core.Internal.Visibility(@"UseCustomServices", true)] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"Unique local identifier for the custom set of services. Used as the key in the registries dictionary.")] public string ServicesIdentifier;
+        [UnityEngine.Header(@"Services Registry")] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"Use this to setup a custom services registry. All services in a registry are unique.")] public bool UseCustomServices;
+        public IUnityServices Services { get; }
+        protected ServicesBehaviour() {}
+        protected abstract void Cleanup();
+        protected abstract void OnServicesInitialized();
+        protected abstract void OnServicesReady();
+    }
+
+    [UnityEngine.AddComponentMenu(@"Services/Services Initialization")] public class ServicesInitialization : ServicesBehaviour
+    {
+        [Unity.Services.Core.Internal.Visibility(@"UseCustomEnvironment", true)] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"Choose the environment name to pass in the initialization options. You can configure environments in the unity dashboard.")] public string EnvironmentName = @"production";
+        [UnityEngine.Header(@"Events")] [UnityEngine.SerializeField] public ServicesInitializationEvents Events;
+        [UnityEngine.Header(@"Automation")] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"This will attempt to initialize the services in Start().")] public bool InitializeOnStart;
+        [Unity.Services.Core.Internal.Visibility(@"InitializeOnStart", true)] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"Use this to set a custom environment in the initialization options. Defaults to the environment defined in the project settings or production.")] public bool UseCustomEnvironment;
+        protected override void Cleanup();
+        protected override void OnServicesInitialized();
+        protected override void OnServicesReady();
+    }
+
+    public class ServicesInitializationEvents
+    {
+        [UnityEngine.SerializeField] public UnityEngine.Events.UnityEvent Initialized;
+        [UnityEngine.SerializeField] public UnityEngine.Events.UnityEvent<System.Exception> InitializeFailed;
+        public ServicesInitializationEvents() {}
+    }
+}

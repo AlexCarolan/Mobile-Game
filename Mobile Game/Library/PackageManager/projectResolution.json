@@ -1,0 +1,368 @@
+{
+  "context": {
+    "projectPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Packages",
+    "unityVersion": "6000.0.32f1"
+  },
+  "inputs": [
+    "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Packages/manifest.json",
+    "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Packages/packages-lock.json"
+  ],
+  "outputs": {
+    "com.unity.2d.sprite@1.0.0": {
+      "name": "com.unity.2d.sprite",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.2d.sprite",
+      "fingerprint": "6e37a90069af6bceba270d5e592cd6f3521c7a27",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.2d.tilemap@1.0.0": {
+      "name": "com.unity.2d.tilemap",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.2d.tilemap",
+      "fingerprint": "90fc3d022e139285a361c6ed808cb991b4d07184",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.ads@4.4.2": {
+      "name": "com.unity.ads",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ads",
+      "fingerprint": "a7b997f68a1d40387ca4d33fc75578709c140a37",
+      "editorCompatibility": "2018.4.18f1",
+      "version": "4.4.2",
+      "source": "registry"
+    },
+    "com.unity.ai.navigation@2.0.5": {
+      "name": "com.unity.ai.navigation",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ai.navigation",
+      "fingerprint": "9f76b145f0a8dd734ff2a4877f7f7edb83b7f62c",
+      "editorCompatibility": "2023.2.0a18",
+      "version": "2.0.5",
+      "source": "registry"
+    },
+    "com.unity.analytics@3.8.1": {
+      "name": "com.unity.analytics",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.analytics",
+      "fingerprint": "6cc66d58ac08950316d3b86a26c92187aca1ddb0",
+      "editorCompatibility": "2019.3.0a1",
+      "version": "3.8.1",
+      "source": "registry"
+    },
+    "com.unity.collab-proxy@2.6.0": {
+      "name": "com.unity.collab-proxy",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.collab-proxy",
+      "fingerprint": "001b54a8988a14785c8e209d6c788bb15f9e58cf",
+      "editorCompatibility": "2021.3.0f1",
+      "version": "2.6.0",
+      "source": "registry"
+    },
+    "com.unity.ext.nunit@2.0.5": {
+      "name": "com.unity.ext.nunit",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ext.nunit",
+      "fingerprint": "60ef35ffd3cd5e2f5c8887a4a4ca6148854cd092",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.0.5",
+      "source": "registry"
+    },
+    "com.unity.ide.rider@3.0.31": {
+      "name": "com.unity.ide.rider",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ide.rider",
+      "fingerprint": "7921be93db40ec070fcb01ed82d1c3df1bbdddcd",
+      "editorCompatibility": "2019.2.6f1",
+      "version": "3.0.31",
+      "source": "registry"
+    },
+    "com.unity.ide.visualstudio@2.0.22": {
+      "name": "com.unity.ide.visualstudio",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ide.visualstudio",
+      "fingerprint": "8140e851d83e922ca2021b04a89519de94ebe38c",
+      "editorCompatibility": "2019.4.25f1",
+      "version": "2.0.22",
+      "source": "registry"
+    },
+    "com.unity.ide.vscode@1.2.5": {
+      "name": "com.unity.ide.vscode",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ide.vscode",
+      "fingerprint": "82e68656b7bdc5da8beb1fbaf1bb4ecf13456d51",
+      "editorCompatibility": "2019.2.0a12",
+      "version": "1.2.5",
+      "source": "registry"
+    },
+    "com.unity.multiplayer.center@1.0.0": {
+      "name": "com.unity.multiplayer.center",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.multiplayer.center",
+      "fingerprint": "f502d8ac613fa076192423e73892fbd89eb4049b",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.purchasing@4.12.2": {
+      "name": "com.unity.purchasing",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.purchasing",
+      "fingerprint": "649c6c7b3b1b6277839041f4987c0a1e66176678",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "4.12.2",
+      "source": "registry"
+    },
+    "com.unity.test-framework@1.4.5": {
+      "name": "com.unity.test-framework",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.test-framework",
+      "fingerprint": "0a21eb82d95cd331643a1e0ce4e8e9a5f18954c8",
+      "editorCompatibility": "2019.4.0a10",
+      "version": "1.4.5",
+      "source": "registry"
+    },
+    "com.unity.timeline@1.8.7": {
+      "name": "com.unity.timeline",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.timeline",
+      "fingerprint": "c58b4ee65782ad38338e29f7ee67787cb6998f04",
+      "editorCompatibility": "2019.3.0a1",
+      "version": "1.8.7",
+      "source": "registry"
+    },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.ugui",
+      "fingerprint": "fd5da3b4bec8d043b01c30177bd62059c5fa36d0",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
+      "source": "builtin"
+    },
+    "com.unity.xr.legacyinputhelpers@2.1.11": {
+      "name": "com.unity.xr.legacyinputhelpers",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.xr.legacyinputhelpers",
+      "fingerprint": "a3936666e06871a5fd0461a69a4d99efb31a21c1",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.1.11",
+      "source": "registry"
+    },
+    "com.unity.modules.accessibility@1.0.0": {
+      "name": "com.unity.modules.accessibility",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.accessibility",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.ai@1.0.0": {
+      "name": "com.unity.modules.ai",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.ai",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.androidjni@1.0.0": {
+      "name": "com.unity.modules.androidjni",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.androidjni",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.animation@1.0.0": {
+      "name": "com.unity.modules.animation",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.animation",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.assetbundle@1.0.0": {
+      "name": "com.unity.modules.assetbundle",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.assetbundle",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.audio@1.0.0": {
+      "name": "com.unity.modules.audio",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.audio",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.cloth@1.0.0": {
+      "name": "com.unity.modules.cloth",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.cloth",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.director@1.0.0": {
+      "name": "com.unity.modules.director",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.director",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.imageconversion@1.0.0": {
+      "name": "com.unity.modules.imageconversion",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.imageconversion",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.imgui@1.0.0": {
+      "name": "com.unity.modules.imgui",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.imgui",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.jsonserialize@1.0.0": {
+      "name": "com.unity.modules.jsonserialize",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.jsonserialize",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.particlesystem@1.0.0": {
+      "name": "com.unity.modules.particlesystem",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.particlesystem",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.physics@1.0.0": {
+      "name": "com.unity.modules.physics",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.physics",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.physics2d@1.0.0": {
+      "name": "com.unity.modules.physics2d",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.physics2d",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.screencapture@1.0.0": {
+      "name": "com.unity.modules.screencapture",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.screencapture",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.terrain@1.0.0": {
+      "name": "com.unity.modules.terrain",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.terrain",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.terrainphysics@1.0.0": {
+      "name": "com.unity.modules.terrainphysics",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.terrainphysics",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.tilemap@1.0.0": {
+      "name": "com.unity.modules.tilemap",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.tilemap",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.ui@1.0.0": {
+      "name": "com.unity.modules.ui",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.ui",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.uielements@1.0.0": {
+      "name": "com.unity.modules.uielements",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.uielements",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.umbra@1.0.0": {
+      "name": "com.unity.modules.umbra",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.umbra",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unityanalytics@1.0.0": {
+      "name": "com.unity.modules.unityanalytics",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unityanalytics",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unitywebrequest@1.0.0": {
+      "name": "com.unity.modules.unitywebrequest",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unitywebrequest",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unitywebrequestassetbundle@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestassetbundle",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unitywebrequestaudio@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestaudio",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unitywebrequestaudio",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unitywebrequesttexture@1.0.0": {
+      "name": "com.unity.modules.unitywebrequesttexture",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unitywebrequesttexture",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.unitywebrequestwww@1.0.0": {
+      "name": "com.unity.modules.unitywebrequestwww",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.unitywebrequestwww",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.vehicles@1.0.0": {
+      "name": "com.unity.modules.vehicles",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.vehicles",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.video@1.0.0": {
+      "name": "com.unity.modules.video",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.video",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.vr@1.0.0": {
+      "name": "com.unity.modules.vr",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.vr",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.wind@1.0.0": {
+      "name": "com.unity.modules.wind",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.wind",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.xr@1.0.0": {
+      "name": "com.unity.modules.xr",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.xr",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.subsystems@1.0.0": {
+      "name": "com.unity.modules.subsystems",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.subsystems",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.modules.hierarchycore@1.0.0": {
+      "name": "com.unity.modules.hierarchycore",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.modules.hierarchycore",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
+    "com.unity.services.core@1.14.0": {
+      "name": "com.unity.services.core",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.services.core",
+      "fingerprint": "9e81a5e382457b799480b311ce51187be99abbbf",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.14.0",
+      "source": "registry"
+    },
+    "com.unity.services.analytics@6.0.1": {
+      "name": "com.unity.services.analytics",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.services.analytics",
+      "fingerprint": "f7e249983920dd67eba8952b09e37a6fe4582dd0",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "6.0.1",
+      "source": "registry"
+    },
+    "com.unity.nuget.newtonsoft-json@3.2.1": {
+      "name": "com.unity.nuget.newtonsoft-json",
+      "resolvedPath": "/Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/Library/PackageCache/com.unity.nuget.newtonsoft-json",
+      "fingerprint": "74deb55db2a0c29ddfda576608bcb86abbd13ee6",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "3.2.1",
+      "source": "registry"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "com.unity.services.analytics",
+  "displayName": "Analytics",
+  "version": "6.0.1",
+  "unity": "2021.3",
+  "description": "The Unity Analytics package automatically collects core events and user properties when someone uses your game or application, and enables you to track specific in-game actions your user performs by defining custom events. The data collected from this package is surfaced in the Unity dashboard where you can use it to gather user insights, segment your player base and make informed decisions around the optimization of your game.",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.services.core": "1.12.4"
+  },
+  "samples": [
+    {
+      "displayName": "Standard Events",
+      "description": "Example of using the predefined standardized products, including a demo scene",
+      "path": "Samples~/StandardEvents"
+    }
+  ],
+  "_upm": {
+    "gameService": {
+      "genericDashboardUrl": "https://dashboard.unity3d.com/analytics",
+      "projectDashboardUrl": "https://dashboard.unity3d.com/organizations/{0}/projects/{1}/analytics/events",
+      "projectDashboardUrlType": "OrganizationKeyAndProjectGuid",
+      "configurePath": "Project/Services/Analytics - Gaming Services"
+    },
+    "supportedPlatforms": [
+      "Android",
+      "iOS",
+      "Linux",
+      "Mac",
+      "PC",
+      "Windows 8.1 Universal",
+      "Windows 10 Universal",
+      "WebGL"
+    ],
+    "changelog": "### Added\n\n* New Analytics Debug Panel accessible in the Unity Editor from Services -> Analytics -> Debug Panel\n  * Monitor the SDK's activity while you play-test\n  * Observe events as they are recorded and uploaded\n  * ... and more!\n\n### Breaking Changes\n\n* The minimum supported editor version for the UGS Analytics SDK is now 2021.3\n* All methods, classes and structs marked as `Obsolete` in earlier versions of the SDK have been removed\n  * If you have trouble upgrading, move to 5.1.0 first, fix the deprecation warnings there, then move to 6.0.0"
+  },
+  "relatedPackages": {
+    "com.unity.services.analytics.tests": "6.0.1"
+  },
+  "upmCi": {
+    "footprint": "3fe2b13c495b1f7c729e573b5c6e387c8e07e75d"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.analytics@6.0/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git",
+    "type": "git",
+    "revision": "e54e6e452cff2d0d31e9b5530b2dbd8ffcf2f0e7"
+  },
+  "_fingerprint": "f7e249983920dd67eba8952b09e37a6fe4582dd0"
+}
