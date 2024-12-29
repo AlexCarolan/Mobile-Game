@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - GenerateLevel
     - PlayerCameraTether
-    - PlayerCollision
     - PlayerMovement
     - ScoreCounter
     Unity.2D.Tilemap.Editor.dll:
@@ -71,31 +70,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2902}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2958}
     - Class: 114
-      Script: {instanceID: 3140}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3386}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3556}
     - Class: 114
-      Script: {instanceID: 3856}
+      Script: {instanceID: 3854}
     - Class: 114
-      Script: {instanceID: 4684}
+      Script: {instanceID: 4682}
     - Class: 114
-      Script: {instanceID: 4732}
+      Script: {instanceID: 4730}
     - Class: 114
-      Script: {instanceID: 4832}
+      Script: {instanceID: 4830}
     - Class: 114
-      Script: {instanceID: 5180}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -507,12 +506,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
-  - hash:
-      serializedVersion: 2
-      Hash: ea9e2ef4b444322b65152e1b4292fc71
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerCollision
   - hash:
       serializedVersion: 2
       Hash: 21e871d89bbce53c038fc75ad1b7c7f3
@@ -972,4 +965,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/GameScene.unity
-  playerPath: /Users/alexcarolan/Documents/Builds/Runner.app
+  playerPath: /Users/alexcarolan/Documents/repos/Mobile-Game/Mobile Game/game.app
